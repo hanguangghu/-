@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HAPPY PUZZLE!</title>
+    <script src="A2.js"></script>
+    <link href="A2.css" rel="stylesheet"/>
+</head>
+<body style="padding: 0;margin:0" onkeydown="onKeyDown(event)">
+    <div class="gameContainer">
+        <div class="gameMenu">
+            <div class="menuItem">
+                <p class="menuTips">选择图片</p>
+                <div class="chooseContent">
+                    <p class="menuOption" onclick="onChooseImage(0)">可爱的小黄鸭</p>
+                    <p class="menuOption" onclick="onChooseImage(1)">贪婪的国王</p>
+                    <p class="menuOption" onclick="onChooseImage(2)">凶猛的恐龙</p>
+                    <p class="menuOption" onclick="onChooseImage(3)">芜湖~起飞!</p>
+                    <p class="menuOption" onclick="onChooseImage(4)">惊喜图片，慎点!</p>
+                </div>
+            </div>
+            <div class="menuItem">
+                <p class="menuTips">模式选择</p>
+                <div class="chooseContent">
+                    <p class="menuOption" onclick="onChooseDifficulty(3)">easy3*3</p>
+                    <p class="menuOption" onclick="onChooseDifficulty(4)">normal4*4</p>
+                    <p class="menuOption" onclick="onChooseDifficulty(5)">hard5*5</p>
+                </div>
+            </div>
+            <div class="menuItem" id="tips" onclick="onTips()">
+                <p class="menuTips">下一步帮助</p>
+            </div>
+            <div class="menuItem" onclick="opening()">
+                <p class="menuTips">开始/重新开始</p>
+            </div>
+
+        </div>
+<h2>通过移动小方块将图片还原成右图</h2>
+        <div class="gameContent">
+            <div class="gameRegion"></div>
+            <div>
+                <img src="./img/duck.jpg" id="tipImg"/>
+                <p id="score">当前操作次数：0</p>
+                <br>
+                <h2>Tips:</h2>
+                <ul>
+                    <li>“白块”附近的小方块是可以移动的噢</li>
+                    <li>慎用下一步提示噢，看到自己解出来的拼图成就感满满！:-)</li>
+                </ul>
+                <br>
+                <p id="demo"></p>
+            </div>
+        </div>
+    </div>
+    <!--<div class="container">
+<div class="center_div">
+<h2>Tips:</h2>
+<p>“白块”附近的小方块是可以移动的噢</p>
+</div>
+</div>-->
+</body>
+<script type="text/javascript">
+    window.onload=function(){
+        image=new Image();
+        imagePath="./img/duck.jpg";
+        image.src=imagePath;
+        image.onload=function() {
+            singleWidth=-1*image.width/difficulty;
+            singleHeight=-1*image.height/difficulty;
+            opening();
+        }
+    }
+</script>
+</html>

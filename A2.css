@@ -1,0 +1,124 @@
+/*.test{*/
+    /*display:flex;*/
+    /*flex-direction:row;*/
+    /*background: url(../img/duck.jpg) 0 100px;*/
+    /*width:400px;*/
+    /*height:300px;*/
+/*}*/
+
+body{
+    /*margin-left:200px;
+    
+     */
+    background-image:url('img/7.jpg');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+
+     /*修改背景图片设置*/
+}
+/*.container
+{
+	text-align:center;
+}
+
+.center_div
+{
+	border:1px solid gray;
+	margin-left:auto;
+	margin-right:auto;
+	width:90%;
+	background-color:#d0f0f6;
+	text-align:left;
+	padding:8px;
+}
+*/
+.gameContainer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:auto;
+    padding-top:15px;
+    width:1200px;
+}
+.gameMenu{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    width:100%;
+    height:40px;
+    border-bottom:1px  solid gold;
+    margin-bottom:120px;
+    cursor:pointer;
+}
+.menuItem{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    width:25%;
+    height:100%;
+    border-right:1px solid gold;
+    background:cornflowerblue;
+ }
+.menuTips{
+    width:100%;
+    text-align: center;
+    font-size:15px;
+    margin:auto;
+}
+.menuOption{
+    border-bottom:1px solid gold;
+    padding:10px;
+    font-size:15px;
+    text-align:center;
+    margin:0;
+}
+.chooseContent {
+    border-top:1px solid gold;
+    display: none;
+    position: absolute;
+    top:40px;
+    background:cornflowerblue;
+    width:100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.menuItem:hover .chooseContent {
+    display: block;
+}
+.gameContent{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    justify-content:space-between;
+ }
+.gameRegion{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:column;
+    width:80%;
+    cursor:pointer;
+}
+#tipImg{
+    width:300px;
+    height:200px;
+    margin:auto;
+}
+
+.rowContainer{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width:100%;
+    margin:1px;
+}
+.rowItemDisable{
+    margin:1px;
+    opacity: 0.75;
+}
+.rowItemEnable{
+    margin:1px;
+    opacity: 1;
+}
